@@ -90,7 +90,7 @@ const Hero = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 container mx-auto px-6 py-20">
+      <div className="relative z-10 container mx-auto px-6 pt-32 pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
           {/* Left Content */}
           <motion.div
@@ -193,104 +193,77 @@ const Hero = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right - Floating Tech Cards */}
+          {/* Right - Floating Tech Cards - Diamond Pattern */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex justify-center lg:justify-end relative h-[500px] lg:h-[600px]"
+            className="flex justify-center lg:justify-end"
           >
-            <div className="relative w-full max-w-lg">
-              {/* Main Large Tech Card - React */}
-              <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5, duration: 0.8 }}
-                whileHover={{ scale: 1.05, rotate: 2 }}
-                className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-64 glass-card rounded-3xl p-8 flex flex-col items-center justify-center gap-6 shadow-2xl shadow-cyan-500/20 cursor-pointer"
-                style={{ transformStyle: "preserve-3d" }}
-              >
-                <SiReact className="text-8xl text-cyan-400 animate-spin-slow" />
-                <div className="text-center">
-                  <h3 className="text-2xl font-bold text-white mb-2">React</h3>
-                  <p className="text-sm text-gray-400">Component-Based UI</p>
-                </div>
-              </motion.div>
-
+            {/* Container sized for content: 2 rows of small cards + React in middle */}
+            <div className="relative w-[420px] h-[480px]">
               {/* JavaScript Card - Top Left */}
               <motion.div
-                initial={{ opacity: 0, x: -50 }}
+                initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.7, duration: 0.8 }}
+                transition={{ delay: 0.5, duration: 0.6 }}
                 whileHover={{ scale: 1.1, rotate: -5 }}
-                className="absolute top-16 left-0 w-40 h-40 glass-card rounded-2xl p-6 flex flex-col items-center justify-center gap-3 shadow-xl shadow-yellow-500/20 cursor-pointer"
+                className="absolute top-0 left-0 w-28 h-28 glass-card rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xl shadow-yellow-500/20 cursor-pointer"
               >
-                <SiJavascript className="text-5xl text-yellow-400" />
-                <p className="text-sm font-semibold text-white">JavaScript</p>
+                <SiJavascript className="text-4xl text-yellow-400" />
+                <p className="text-xs font-semibold text-white">JavaScript</p>
               </motion.div>
 
-              {/* Tailwind Card - Bottom Left */}
+              {/* CSS3 Card - Top Right */}
               <motion.div
-                initial={{ opacity: 0, x: -50 }}
+                initial={{ opacity: 0, x: 30 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.9, duration: 0.8 }}
+                transition={{ delay: 0.6, duration: 0.6 }}
                 whileHover={{ scale: 1.1, rotate: 5 }}
-                className="absolute bottom-32 left-0 w-40 h-40 glass-card rounded-2xl p-6 flex flex-col items-center justify-center gap-3 shadow-xl shadow-sky-500/20 cursor-pointer"
-              >
-                <SiTailwindcss className="text-5xl text-sky-400" />
-                <p className="text-sm font-semibold text-white">Tailwind</p>
-              </motion.div>
-
-              {/* HTML5 Card - Bottom Right */}
-              <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.1, duration: 0.8 }}
-                whileHover={{ scale: 1.1, rotate: -3 }}
-                className="absolute bottom-20 right-8 w-36 h-36 glass-card rounded-2xl p-6 flex flex-col items-center justify-center gap-3 shadow-xl shadow-orange-500/20 cursor-pointer"
-              >
-                <SiHtml5 className="text-5xl text-orange-500" />
-                <p className="text-sm font-semibold text-white">HTML5</p>
-              </motion.div>
-
-              {/* CSS3 Card - Middle Left */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 1.3, duration: 0.8 }}
-                whileHover={{ scale: 1.1, rotate: 3 }}
-                className="absolute top-1/2 -translate-y-1/2 left-8 w-32 h-32 glass-card rounded-2xl p-5 flex flex-col items-center justify-center gap-2 shadow-xl shadow-blue-500/20 cursor-pointer"
+                className="absolute top-0 right-0 w-28 h-28 glass-card rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xl shadow-blue-500/20 cursor-pointer"
               >
                 <SiCss3 className="text-4xl text-blue-400" />
                 <p className="text-xs font-semibold text-white">CSS3</p>
               </motion.div>
 
-              {/* Decorative Elements */}
+              {/* Main React Card - Center */}
               <motion.div
-                animate={{
-                  y: [0, -20, 0],
-                  opacity: [0.3, 0.6, 0.3],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="absolute top-10 left-10 w-20 h-20 bg-purple-500/10 rounded-full blur-xl"
-              />
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.7, duration: 0.6 }}
+                whileHover={{ scale: 1.05, rotate: 2 }}
+                className="absolute top-[28%] left-[25%] -translate-x-1/2 -translate-y-1/2 w-52 h-52 glass-card rounded-3xl p-6 flex flex-col items-center justify-center gap-4 shadow-2xl shadow-cyan-500/20 cursor-pointer z-10"
+              >
+                <SiReact className="text-7xl text-cyan-400 animate-spin-slow" />
+                <div className="text-center">
+                  <h3 className="text-xl font-bold text-white mb-1">React</h3>
+                  <p className="text-xs text-gray-400">Component-Based UI</p>
+                </div>
+              </motion.div>
+
+              {/* Tailwind Card - Bottom Left */}
               <motion.div
-                animate={{
-                  y: [0, 20, 0],
-                  opacity: [0.3, 0.6, 0.3],
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 1,
-                }}
-                className="absolute bottom-10 right-10 w-24 h-24 bg-pink-500/10 rounded-full blur-xl"
-              />
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.8, duration: 0.6 }}
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                className="absolute bottom-0 left-0 w-28 h-28 glass-card rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xl shadow-sky-500/20 cursor-pointer"
+              >
+                <SiTailwindcss className="text-4xl text-sky-400" />
+                <p className="text-xs font-semibold text-white">Tailwind</p>
+              </motion.div>
+
+              {/* HTML5 Card - Bottom Right */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.9, duration: 0.6 }}
+                whileHover={{ scale: 1.1, rotate: -5 }}
+                className="absolute bottom-0 right-0 w-28 h-28 glass-card rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xl shadow-orange-500/20 cursor-pointer"
+              >
+                <SiHtml5 className="text-4xl text-orange-500" />
+                <p className="text-xs font-semibold text-white">HTML5</p>
+              </motion.div>
             </div>
           </motion.div>
         </div>

@@ -207,7 +207,11 @@ const Hero = () => {
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
-                whileHover={{ scale: 1.1, rotate: -5 }}
+                whileHover={{
+                  scale: 1.1,
+                  rotate: -5,
+                  transition: { type: "spring", stiffness: 400, damping: 15 },
+                }}
                 className="absolute top-0 left-0 w-28 h-28 glass-card rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xl shadow-yellow-500/20 cursor-pointer"
               >
                 <SiJavascript className="text-4xl text-yellow-400" />
@@ -219,7 +223,11 @@ const Hero = () => {
                 initial={{ opacity: 0, x: 30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.6, duration: 0.6 }}
-                whileHover={{ scale: 1.1, rotate: 5 }}
+                whileHover={{
+                  scale: 1.1,
+                  rotate: 5,
+                  transition: { type: "spring", stiffness: 400, damping: 15 },
+                }}
                 className="absolute top-0 right-0 w-28 h-28 glass-card rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xl shadow-blue-500/20 cursor-pointer"
               >
                 <SiCss3 className="text-4xl text-blue-400" />
@@ -231,7 +239,11 @@ const Hero = () => {
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.7, duration: 0.6 }}
-                whileHover={{ scale: 1.05, rotate: 2 }}
+                whileHover={{
+                  scale: 1.05,
+                  rotate: 2,
+                  transition: { type: "spring", stiffness: 400, damping: 15 },
+                }}
                 className="absolute top-[28%] left-[25%] -translate-x-1/2 -translate-y-1/2 w-52 h-52 glass-card rounded-3xl p-6 flex flex-col items-center justify-center gap-4 shadow-2xl shadow-cyan-500/20 cursor-pointer z-10"
               >
                 <SiReact className="text-7xl text-cyan-400 animate-spin-slow" />
@@ -246,7 +258,11 @@ const Hero = () => {
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.8, duration: 0.6 }}
-                whileHover={{ scale: 1.1, rotate: 5 }}
+                whileHover={{
+                  scale: 1.1,
+                  rotate: 5,
+                  transition: { type: "spring", stiffness: 400, damping: 15 },
+                }}
                 className="absolute bottom-0 left-0 w-28 h-28 glass-card rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xl shadow-sky-500/20 cursor-pointer"
               >
                 <SiTailwindcss className="text-4xl text-sky-400" />
@@ -258,7 +274,11 @@ const Hero = () => {
                 initial={{ opacity: 0, x: 30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.9, duration: 0.6 }}
-                whileHover={{ scale: 1.1, rotate: -5 }}
+                whileHover={{
+                  scale: 1.1,
+                  rotate: -5,
+                  transition: { type: "spring", stiffness: 400, damping: 15 },
+                }}
                 className="absolute bottom-0 right-0 w-28 h-28 glass-card rounded-2xl p-4 flex flex-col items-center justify-center gap-2 shadow-xl shadow-orange-500/20 cursor-pointer"
               >
                 <SiHtml5 className="text-4xl text-orange-500" />

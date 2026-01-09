@@ -309,7 +309,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2 }}
-          className="mt-20 overflow-x-auto"
+          className="mt-20"
         >
           <div className="flex gap-4 justify-center flex-wrap max-w-4xl mx-auto">
             {skills.map((skill, index) => (

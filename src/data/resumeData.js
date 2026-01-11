@@ -9,7 +9,7 @@ const resumeData = {
     email: "suraj802119@gmail.com",
     phone: "7903771301",
     linkedin: "https://www.linkedin.com/in/surajgupta23/",
-    github: "https://github.com/surajgupta1601/",
+    github: "https://github.com/surajgupt1601/",
   },
 
   summary:

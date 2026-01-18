@@ -173,32 +173,10 @@ const Navbar = () => {
               ))}
             </div>
 
-            {/* Tablet Horizontal Scroll Navigation - Visible on md to lg */}
-            <div className="hidden md:flex lg:hidden items-center overflow-x-auto scrollbar-hide gap-4 max-w-[60%] pr-4">
-              {navLinks.map((link) => (
-                <motion.a
-                  key={link.name}
-                  href={link.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection(link.href);
-                  }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`text-xs sm:text-sm font-semibold transition-colors duration-300 whitespace-nowrap flex-shrink-0 px-2 py-1 rounded-lg ${
-                    activeSection === link.href.substring(1)
-                      ? "text-purple-400 bg-purple-400/10"
-                      : "text-gray-300 hover:text-white"
-                  }`}
-                >
-                  {link.name}
-                </motion.a>
-              ))}
-            </div>
-
-            {/* Mobile Menu Button - Visible below md (768px) */}
+            {/* Mobile/Tablet Menu Button - Visible below lg (1024px) */}
             <motion.button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors z-50 relative"
+              className="lg:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors z-50 relative"
               whileTap={{ scale: 0.9 }}
               aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
             >
@@ -228,7 +206,7 @@ const Navbar = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden"
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden"
               onClick={() => setIsMobileMenuOpen(false)}
             />
 
@@ -238,7 +216,7 @@ const Navbar = () => {
               initial="closed"
               animate="open"
               exit="closed"
-              className="fixed top-0 right-0 w-[75vw] max-w-[300px] h-screen overflow-hidden bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 z-40 md:hidden shadow-2xl"
+              className="fixed top-0 right-0 w-[75vw] max-w-[350px] h-screen overflow-hidden bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 z-40 lg:hidden shadow-2xl"
             >
               {/* Menu Content */}
               <div className="flex flex-col h-full pt-20 pb-8 px-6">

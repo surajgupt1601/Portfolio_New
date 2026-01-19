@@ -5,7 +5,7 @@ const resumeData = {
   personal: {
     name: "Suraj Gupta",
     title: "Front-End Web Developer",
-    location: "Chhatarpur, New Delhi, India",
+    location: "Chhatarpur, New Delhi",
     email: "suraj802119@gmail.com",
     phone: "7903771301",
     linkedin: "https://www.linkedin.com/in/surajgupta23/",

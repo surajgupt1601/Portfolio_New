@@ -2,6 +2,8 @@ import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { FiMapPin, FiBriefcase } from "react-icons/fi";
+import { SiReact } from "react-icons/si";
 import resumeData from "../data/resumeData";
 import { fadeIn } from "../utils/animations";
 
@@ -109,17 +111,19 @@ const About = () => {
             >
               <div className="glass-card px-4 py-2 rounded-full">
                 <span className="text-purple-400 font-semibold">
-                  📍 {resumeData.personal.location}
+                  <FiMapPin className="inline mr-1" />{" "}
+                  {resumeData.personal.location}
                 </span>
               </div>
               <div className="glass-card px-4 py-2 rounded-full">
                 <span className="text-pink-400 font-semibold">
-                  🎓 MCA Student
+                  <SiReact className="inline mr-1" /> React Developer
                 </span>
               </div>
               <div className="glass-card px-4 py-2 rounded-full">
                 <span className="text-blue-400 font-semibold">
-                  💼 {calculateExperience()}
+                  <FiBriefcase className="inline mr-1" />{" "}
+                  {calculateExperience()}
                 </span>
               </div>
             </motion.div>
